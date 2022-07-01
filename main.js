@@ -54,3 +54,24 @@ function createTestimonialsUrl() {
 
 	return url;
 }
+
+// async await option
+// async function fetchAndAppendTestimonials() {
+// 	canFetchTestimonials = false;
+// 	const url = createTestimonialsUrl();
+// 	const response = await fetch(url);
+// 	const { testimonials, hasNext } = await response.json();
+
+// 	const fragment = document.createDocumentFragment();
+// 	testimonials.forEach(({ message }) => {
+// 		fragment.appendChild(createTestimonialElement(message));
+// 	});
+// 	testimonialContainer.appendChild(fragment);
+
+// 	if (hasNext) {
+// 		afterID = testimonials[testimonials.length - 1].id;
+// 	} else {
+// 		testimonialContainer.removeEventListener('scroll', handleScroll);
+// 	}
+// 	canFetchTestimonials = true;
+// }
